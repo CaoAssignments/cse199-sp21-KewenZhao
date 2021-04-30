@@ -10,4 +10,4 @@ We want to prove two things:
 1. If none of a and b can join the list, they still can't join if we exchange their order.
 2. If a can join but b can't, they at most one of then can join if we exchange their order.
 
-Reader can think about why they are true.
+Readers can think about why they are true.
