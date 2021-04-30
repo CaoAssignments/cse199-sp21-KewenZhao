@@ -1,20 +1,19 @@
 #include "bits/stdc++.h"
 using namespace std;
-#define MAXN 1000005
+typedef pair<int,int> ii;
 int main(){
   freopen("sort.in", "r", stdin);
   freopen("sort.out", "w", stdout);
   int N;
   cin >> N;
-  int arr[MAXN];
-  int count = 0;
-  int smallest = INT_MAX;
-  for(int i = 0; i < N; i++) cin >> arr[i];
-  for(int i = N-1; i >=0; i--){
-    if(smallest < arr[i]){
-      count++;
-    }
-    smallest = min(smallest, arr[i]);
+  vector<ii> arr;
+  int ans = 0;
+  for(int i = 0; i < N; i++){
+    int c;
+    cin >> c;
+    arr.push_back((ii){c,i});
   }
-  cout << count + 1;
+  sort(arr.begin(), arr.end());
+  for(int i = 1; i <= N; ++i) ans=max(ans,arr[i].second-i+1);
+  cout << ans;
 }
