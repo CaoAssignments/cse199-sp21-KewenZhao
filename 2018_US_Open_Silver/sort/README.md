@@ -1,10 +1,13 @@
-It's important to see the [visualization of bubble sort](https://www.youtube.com/watch?v=Cq7SMsQBEUw)
+## understand the problem
+What's the behavior of the provided script?
+- sort array in ascending order
+- sort array in descending order
+It's important to see the [visualization of bubble sort](https://www.youtube.com/watch?v=Cq7SMsQBEUw), look at the movement of small versus large numbers. What difference did you observe? 
 ## Observations
-1. Notice it sorts in ascending order
-2. Each for loop put the largest unsorted element to the end
-3. For every number, if a smaller number appear after it, then it cost one iteration to put this number on the right place.
+2. In one cycle, a large number is continuously moving back many times, but a small number only move left one at a time, so we just count for each number, how many left moves are necessary, and the maximum value is the answer.
+3. To figure out how many time a number need to move left, we calculate the distance from its current position to its final position. We can obtain the final positions by applying `zip sort` to the array first.
 
 ## Solution
-Letc count how many number satisfy obseration 3, the answer = N - #counts + 1
+The answer is max(current_index - final_index)
 
 
