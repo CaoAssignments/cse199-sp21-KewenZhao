@@ -14,6 +14,6 @@ int main(){
     arr.push_back((ii){c,i});
   }
   sort(arr.begin(), arr.end());
-  for(int i = 1; i <= N; ++i) ans=max(ans,arr[i].second-i+1);
+  for(int i = 0; i < N; ++i) ans=max(ans,arr[i].second-i+1);
   cout << ans;
 }
